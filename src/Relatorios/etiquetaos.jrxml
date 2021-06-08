@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etiquetaos" pageWidth="311" pageHeight="65" columnWidth="311" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="152e1be2-47bd-4ae0-9735-a6a8dbc6c5dd">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etiquetaos" pageWidth="289" pageHeight="62" columnWidth="289" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="152e1be2-47bd-4ae0-9735-a6a8dbc6c5dd">
 	<property name="ireport.zoom" value="4.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<style name="fundo preto" mode="Opaque" forecolor="#FFFFFF" backcolor="#CCCCCC" pattern="" isBlankWhenNull="true" fontName="Arial Black">
-		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
-	</style>
 	<queryString>
 		<![CDATA[select  cabec.idos_oscabecalho as codOS , cabec.codcliente as codcliente,cli.nome,
  cabec.datachamado as data, cabec.horachamado as hora  , pat.descricao
@@ -20,21 +17,30 @@ from OS_OSCABECALHO as cabec
 	<field name="HORA" class="java.lang.String"/>
 	<field name="DESCRICAO" class="java.lang.String"/>
 	<pageHeader>
-		<band height="65">
+		<band height="60">
 			<frame>
-				<reportElement mode="Opaque" x="202" y="49" width="97" height="16" backcolor="#000000" uuid="7adba656-907a-4a28-b1dd-3e6e056703e4"/>
+				<reportElement mode="Opaque" x="1" y="49" width="288" height="11" backcolor="#000000" uuid="8bd0b366-cb33-4000-a601-fefe8314141e"/>
 			</frame>
 			<frame>
-				<reportElement mode="Opaque" x="105" y="49" width="97" height="16" backcolor="#000000" uuid="fce1c3e5-14cd-4d82-8ac8-ffbe5f892690"/>
+				<reportElement mode="Opaque" x="1" y="0" width="288" height="15" backcolor="#000000" uuid="36f83ab6-ca4e-4fba-b4cf-4042e3fc0b11"/>
 			</frame>
 			<frame>
-				<reportElement mode="Opaque" x="105" y="0" width="97" height="15" backcolor="#000000" uuid="13d90f01-68d3-4265-af27-817d0ea8f571"/>
+				<reportElement mode="Opaque" x="193" y="0" width="95" height="15" backcolor="#000000" uuid="0003e1b3-b0fa-4c91-89e9-8372dcf8c6db"/>
 			</frame>
 			<frame>
-				<reportElement mode="Opaque" x="8" y="49" width="97" height="16" backcolor="#000000" uuid="b1bd16fd-1927-4e36-82c6-04c0dcfe4100"/>
+				<reportElement mode="Opaque" x="193" y="49" width="95" height="11" backcolor="#000000" uuid="cd801949-c027-4f6c-aa20-932b93d2f8db"/>
 			</frame>
 			<frame>
-				<reportElement mode="Opaque" x="8" y="0" width="97" height="15" backcolor="#000000" uuid="065021f9-bad8-4297-835e-3293a4446b40"/>
+				<reportElement mode="Opaque" x="97" y="49" width="95" height="11" backcolor="#000000" uuid="4ef31dfb-f948-474b-98a0-814e9d5314c9"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="97" y="0" width="95" height="15" backcolor="#000000" uuid="aafb5558-c9af-46a7-9516-b6cbe486e63d"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="1" y="49" width="95" height="11" backcolor="#000000" uuid="b1bd16fd-1927-4e36-82c6-04c0dcfe4100"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="1" y="0" width="95" height="15" backcolor="#000000" uuid="065021f9-bad8-4297-835e-3293a4446b40"/>
 			</frame>
 			<textField>
 				<reportElement x="0" y="20" width="37" height="0" uuid="a1bf1ee6-79e9-40b2-864c-fb39144bff94"/>
@@ -44,210 +50,193 @@ from OS_OSCABECALHO as cabec
 				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="55" y="0" width="50" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="c7dea657-bc13-4c5f-8685-ceb15f48e2ed"/>
+				<reportElement x="38" y="0" width="54" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="c7dea657-bc13-4c5f-8685-ceb15f48e2ed"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Arial Black" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CODOS}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="8" y="15" width="25" height="8" uuid="a7d2846f-ec3a-4513-8241-8abb84f0dd5f"/>
+				<reportElement x="4" y="15" width="37" height="13" uuid="a7d2846f-ec3a-4513-8241-8abb84f0dd5f"/>
 				<textElement>
 					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="33" y="15" width="64" height="13" uuid="d5ca4359-4393-463f-8adf-d503f1e24489"/>
-				<textElement>
-					<font size="5" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="85" y="41" width="20" height="8" uuid="f0010255-a069-45a0-a226-1860aead6694"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{HORA}]]></textFieldExpression>
-			</textField>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement x="58" y="41" width="30" height="8" uuid="32d72110-ad7a-42e6-acc9-9b4b287b5c58"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="8" y="49" width="97" height="16" forecolor="#FFFFFF" backcolor="#000000" uuid="a0fff424-9f67-4a60-8a33-38ef8702a356"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="Arial Black" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[DATA SYSTEM]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="8" y="28" width="97" height="14" uuid="3f66f07a-5cf0-40b9-9647-d92eb402620f"/>
-				<textElement verticalAlignment="Top">
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="8" y="41" width="50" height="8" uuid="910f8590-fbf0-4af5-929a-0a3c365b376c"/>
-				<textElement verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<text><![CDATA[Data e Hora Abertura:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="15" y="0" width="40" height="15" forecolor="#FFFFFF" uuid="1559e668-3725-4f72-a2fc-8cc258f3a262"/>
-				<textElement verticalAlignment="Middle" markup="none">
-					<font fontName="Arial Black" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[OS Nº:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="97" y="20" width="37" height="0" uuid="488991db-a1cf-4b5b-8285-a04c6603d365"/>
-				<textElement>
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="193" y="20" width="37" height="0" uuid="ff01f53f-d7ff-46d9-89ec-a7c3a314b8fd"/>
-				<textElement>
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="112" y="0" width="40" height="15" forecolor="#FFFFFF" uuid="335b0ada-f0f5-4c20-9683-c610d5c106f2"/>
-				<textElement verticalAlignment="Middle" markup="none">
-					<font fontName="Arial Black" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[OS Nº:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="105" y="41" width="50" height="8" uuid="c1c8789b-db84-404c-939a-47935ecb16ed"/>
-				<textElement verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<text><![CDATA[Data e Hora Abertura:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="105" y="28" width="97" height="14" uuid="43c3a61a-70e9-4fbe-bceb-87fb5275adef"/>
-				<textElement verticalAlignment="Top">
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="152" y="0" width="50" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="81bf1fb8-9482-45d7-9c0c-3961dc4abfbb"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Arial Black" size="10" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CODOS}]]></textFieldExpression>
-			</textField>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement x="155" y="41" width="30" height="8" uuid="888875fe-0375-42db-8879-c50036c08746"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="105" y="49" width="97" height="16" forecolor="#FFFFFF" backcolor="#000000" uuid="cbd17aef-a227-40ff-8784-615113358df6"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="Arial Black" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[DATA SYSTEM]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="182" y="41" width="20" height="8" uuid="53773f46-3e89-4e4d-849a-8c6a4f3790c0"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{HORA}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="130" y="15" width="64" height="13" uuid="c40af5d2-97c6-4e69-95db-29a94f7fb015"/>
+				<reportElement x="28" y="15" width="64" height="13" uuid="d5ca4359-4393-463f-8adf-d503f1e24489"/>
 				<textElement>
 					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="105" y="15" width="25" height="8" uuid="3ed1c113-53bd-4915-a358-8a35f051aa01"/>
-				<textElement>
-					<font size="5" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="202" y="41" width="50" height="8" uuid="03a119cd-e717-498b-81c3-6a4dc7b78eb2"/>
-				<textElement verticalAlignment="Middle">
-					<font size="5"/>
-				</textElement>
-				<text><![CDATA[Data e Hora Abertura:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="279" y="41" width="20" height="8" uuid="47fcf7f8-aad2-48f0-9ee5-890821fd39f7"/>
+				<reportElement x="55" y="41" width="24" height="8" uuid="f0010255-a069-45a0-a226-1860aead6694"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{HORA}]]></textFieldExpression>
 			</textField>
-			<frame>
-				<reportElement mode="Opaque" x="202" y="0" width="97" height="15" backcolor="#000000" uuid="df6155ee-73f6-4f19-966b-1fa41db06edf"/>
-			</frame>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="30" y="41" width="27" height="8" uuid="32d72110-ad7a-42e6-acc9-9b4b287b5c58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement x="202" y="49" width="97" height="16" forecolor="#FFFFFF" backcolor="#000000" uuid="d311b390-cc30-4a85-815e-ebe272c55f93"/>
+				<reportElement x="1" y="49" width="95" height="11" forecolor="#FFFFFF" backcolor="#000000" uuid="d3fc1e6f-8ad9-4545-978e-3d8b76542b26"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
-					<font fontName="Arial Black" size="10" isBold="true"/>
+					<font fontName="Arial Black" size="6" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DATA SYSTEM]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="202" y="28" width="97" height="14" uuid="ded28901-e95f-42fa-b3be-a883307a11a2"/>
+				<reportElement x="4" y="28" width="78" height="13" uuid="3f66f07a-5cf0-40b9-9647-d92eb402620f"/>
 				<textElement verticalAlignment="Top">
 					<font size="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="4" y="41" width="27" height="8" uuid="910f8590-fbf0-4af5-929a-0a3c365b376c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Data e Hora Abertura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="0" width="26" height="15" forecolor="#FFFFFF" uuid="1559e668-3725-4f72-a2fc-8cc258f3a262"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial Black" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OS Nº:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="249" y="0" width="50" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="69bc42b8-99bd-423f-8275-019d787a5882"/>
+				<reportElement x="151" y="41" width="24" height="8" uuid="3ce3b063-f330-41d8-ad56-5b6a98c25294"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HORA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="28" width="78" height="13" uuid="32010668-65e6-43c0-8dc9-49aaf5717208"/>
+				<textElement verticalAlignment="Top">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="97" y="49" width="95" height="11" forecolor="#FFFFFF" backcolor="#000000" uuid="12b09c84-e8bb-463d-a68a-ff3fc87f2e6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial Black" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA SYSTEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="0" width="26" height="15" forecolor="#FFFFFF" uuid="ba1efd7b-7547-4c15-bc96-eda55ea48aac"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial Black" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OS Nº:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="15" width="37" height="13" uuid="c1355eb8-3d7e-4ce4-bd30-d9f675965e36"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="15" width="64" height="13" uuid="f0bba2c8-9978-4ef7-ae34-327f4c4f9be8"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="41" width="27" height="8" uuid="20640ac6-a3ca-4fc9-84b8-8c7284b7f0a9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Data e Hora Abertura:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="126" y="41" width="27" height="8" uuid="92ca3d4b-1c74-46a0-9b02-c489227ed3f5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="54" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="f05a839d-0e61-40cb-b71a-ba2dc074f4d8"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Arial Black" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CODOS}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="227" y="15" width="64" height="13" uuid="79b46f0f-fe17-4c65-8329-d1340dcd97d8"/>
-				<textElement>
-					<font size="5" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
-			</textField>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement x="252" y="41" width="30" height="8" uuid="e1ca8745-031d-481b-b3f5-8ec9c89e6cc3"/>
+				<reportElement x="247" y="41" width="24" height="8" uuid="4910e13b-725a-429f-9d7c-e786809bf04d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{HORA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="28" width="78" height="13" uuid="a6fc0278-7cf7-4e23-be85-5ca46d242460"/>
+				<textElement verticalAlignment="Top">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="209" y="0" width="40" height="15" forecolor="#FFFFFF" uuid="f25859de-b6c4-44e2-a4d4-9069a119886b"/>
+				<reportElement x="193" y="49" width="95" height="11" forecolor="#FFFFFF" backcolor="#000000" uuid="d27e7cfc-0bd8-4caa-a703-5fad837c00b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial Black" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA SYSTEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="26" height="15" forecolor="#FFFFFF" uuid="d004468f-36ab-41af-80c4-d0a616ea87e5"/>
 				<textElement verticalAlignment="Middle" markup="none">
 					<font fontName="Arial Black" size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[OS Nº:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="202" y="15" width="25" height="8" uuid="d8d7ba74-7c7f-43bd-ad0f-da08c3631882"/>
+				<reportElement x="196" y="15" width="37" height="13" uuid="f8d71d14-5dc7-415d-9b03-375a9635539d"/>
 				<textElement>
 					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CODCLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="15" width="64" height="13" uuid="b2123923-68c4-47bd-b77c-62bd66a19269"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="196" y="41" width="27" height="8" uuid="56d78da6-f7bd-4b65-859e-43417e82f13e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Data e Hora Abertura:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="222" y="41" width="27" height="8" uuid="d34bf58c-d3a2-480c-9e5f-62d71e0129e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="54" height="15" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="00613b53-185f-42c4-ac4f-92f943e1b5a8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial Black" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODOS}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
